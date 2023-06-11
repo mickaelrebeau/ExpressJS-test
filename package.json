@@ -1,0 +1,35 @@
+{
+  "name": "expresstest",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "nx exec -- npm run _test -- ",
+    "start": "nodemon app.js",
+    "_test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-generator": "^4.2.0",
+    "mongoose": "^7.2.2",
+    "nodemon": "^2.0.22"
+  },
+  "description": "",
+  "devDependencies": {
+    "@nx/express": "^16.3.2",
+    "nx": "16.3.2",
+    "nx-cloud": "latest"
+  },
+  "nx": {
+    "targets": {
+      "test": {
+        "outputs": [
+          "{projectRoot}/build"
+        ]
+      }
+    }
+  }
+}
